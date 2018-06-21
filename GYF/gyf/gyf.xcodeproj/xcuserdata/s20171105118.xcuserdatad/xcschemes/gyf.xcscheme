@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0EA2468820DB356800808714"
-               BuildableName = "GYF"
-               BlueprintName = "GYF"
-               ReferencedContainer = "container:GYF.xcodeproj">
+               BlueprintIdentifier = "0E07956B20DB374E006B4AD6"
+               BuildableName = "gyf"
+               BlueprintName = "gyf"
+               ReferencedContainer = "container:gyf.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0EA2468820DB356800808714"
-            BuildableName = "GYF"
-            BlueprintName = "GYF"
-            ReferencedContainer = "container:GYF.xcodeproj">
+            BlueprintIdentifier = "0E07956B20DB374E006B4AD6"
+            BuildableName = "gyf"
+            BlueprintName = "gyf"
+            ReferencedContainer = "container:gyf.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0EA2468820DB356800808714"
-            BuildableName = "GYF"
-            BlueprintName = "GYF"
-            ReferencedContainer = "container:GYF.xcodeproj">
+            BlueprintIdentifier = "0E07956B20DB374E006B4AD6"
+            BuildableName = "gyf"
+            BlueprintName = "gyf"
+            ReferencedContainer = "container:gyf.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0EA2468820DB356800808714"
-            BuildableName = "GYF"
-            BlueprintName = "GYF"
-            ReferencedContainer = "container:GYF.xcodeproj">
+            BlueprintIdentifier = "0E07956B20DB374E006B4AD6"
+            BuildableName = "gyf"
+            BlueprintName = "gyf"
+            ReferencedContainer = "container:gyf.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
