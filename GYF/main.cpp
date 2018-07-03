@@ -13,7 +13,6 @@
 #include <cstdio>
 #include <cstdlib>
 using namespace std;
-    // insert code here...
 
 int main()
 {
@@ -34,7 +33,7 @@ int main()
     
     else{
         
-        while(fscanf(a,"%s,%s,%s,%s,%s,%s,%d,%d,%d,%d,%d",number,name,gender,db,clas,phone,judge[0],judge[1],judge[2],judge[3],judge[4]))
+        while(fscanf(a,"%s,%s,%s,%s,%s,%s,%d,%d,%d,%d,%d",number,name,gender,db,clas,phone,&judge[0],&judge[1],&judge[2],&judge[3],&judge[4]))
         {
             for(;i<l;++i){
                 if(i==0){}
@@ -43,5 +42,16 @@ int main()
             }
         }
     }
-    return 0;
+    int c,v,b;
+    for(v=0;v<10;v++)
+        for(c=0;c<10-1-v;c++)
+            if(judge[c]>judge[c+1])
+            {
+                b=judge[c];
+                judge[c]=judge[c+1];
+                judge[c+1]=b;
+            }
+    for(c=0;c<10;c++)
+        printf("%d",judge[c]);
+        return 0;
 }
