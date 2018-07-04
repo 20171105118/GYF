@@ -7,51 +7,63 @@
 //
 
 #include <fstream>
+#include <sstream>
 #include <string>
 #include <iostream>
 #include <streambuf>
 #include <cstdio>
 #include <cstdlib>
+#include <vector>
 using namespace std;
 
 int main()
 {
+
     FILE *a;
     string line;
-    char name[50],clas[50],gender[50],db[50],phone[50],number[50];
+    char name[50][100],clas[50][100],gender[50][100],db[50][100],phone[50][100],number[50][100];
     int judge[100];
     int i=0,l=0;
+    int o=0;
     ifstream fin("/Users/s20171105118/Desktop/GYF/studentdata.csv");
-    while (getline(fin, line))   //判断有多少组数据
+    while (getline(fin, line))
         {
             ++l;
+            istringstream sin(line);
+            vector<string> fields;
+            string field;
+            while (getline(sin, field, ','))
+            {
+                fields.push_back(field);
+                ++o;
+            }
+            o=(o-6)/l;
         }
     if((a=fopen("/Users/s20171105118/Desktop/GYF/studentdata.csv","r"))==0)
     {
         printf("文件不存在\n");
     }
-    
     else{
-        
-        while(fscanf(a,"%s,%s,%s,%s,%s,%s,%d,%d,%d,%d,%d",number,name,gender,db,clas,phone,&judge[0],&judge[1],&judge[2],&judge[3],&judge[4]))
+        while(1)
         {
             for(;i<l;++i){
                 if(i==0){}
-            else
-            printf("%s,%s,%s,%s,%s,%s,%d,%d,%d,%d,%d\n",number,name,gender,db,clas,phone,judge[0],judge[1],judge[2],judge[3],judge[4]);
+                else{
+                    fscanf(a,"%s,%s,%s,%s,%s,%s",number[i],name[i],gender[i],db[i],clas[i],phone[i]);
+                    for(int m=0;m<o;m++){
+                        fscanf(a,"%d,",&judge[m]);
+                    }
+                }
+                
+            printf("%s,%s,%s,%s,%s,%s,",number[i],name[i],gender[i],db[i],clas[i],phone[i]);
+                for(int m=0;m<o;++m)
+                    printf("%d,",judge[m]);
             }
+            if(i==l)
+                break;
         }
     }
-    int c,v,b;
-    for(v=0;v<10;v++)
-        for(c=0;c<10-1-v;c++)
-            if(judge[c]>judge[c+1])
-            {
-                b=judge[c];
-                judge[c]=judge[c+1];
-                judge[c+1]=b;
-            }
-    for(c=0;c<10;c++)
-        printf("%d",judge[c]);
-        return 0;
-}
+    
+    
+    
+    }
