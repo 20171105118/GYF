@@ -25,6 +25,8 @@ int main()
     int judge[100];
     int i=0,l=0;
     int o=0;
+    int pjz[i];
+    int p;
     ifstream fin("/Users/s20171105118/Desktop/GYF/studentdata.csv");
     while (getline(fin, line))
         {
@@ -54,7 +56,24 @@ int main()
                         fscanf(a,"%d,",&judge[m]);
                     }
                 }
-                
+                for(p=0;p<0; p++)
+
+                int max=judge[0];
+                int min=judge[0];
+                for(p=0; p<o; p++)
+                {
+                    if(judge[p]>max)
+                    {
+                        max=judge[p];
+                    }
+                    if(judge[p]<min)
+                    {
+                        min=judge[p];
+                    }
+                    pjz[i]+=a[p];
+                }
+                pjz=1.0*(sum-max-min)/(n-2);
+
             printf("%s,%s,%s,%s,%s,%s,",number[i],name[i],gender[i],db[i],clas[i],phone[i]);
                 for(int m=0;m<o;++m)
                     printf("%d,",judge[m]);
