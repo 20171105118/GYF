@@ -19,7 +19,7 @@ using namespace std;
 int main()
 {
 
-    FILE *a;
+    FILE *a,*b;
     string line;
     char name[50][100],clas[50][100],gender[50][100],db[50][100],phone[50][100],number[50][100];
     int judge[5];
@@ -42,7 +42,9 @@ int main()
                 if(i==0){}
                 else{
                     fscanf(a,"%s,%s,%s,%s,%s,%s,%d,%d,%d,%d,%d",number[i],name[i],gender[i],db[i],clas[i],phone[i],&judge[0],&judge[1],&judge[2],&judge[3],&judge[4]);
+                    
                 }
+                
                 int max=judge[0];
                 int min=judge[0];
                 for(p=0; p<5; p++)
@@ -62,12 +64,22 @@ int main()
             if(i==l)
                 break;
         }
+        
+        
     }
-    ofstream oFile("Users/s20171105118/Desktop/GYF/studentdataout.csv");
+    fclose(a);
+   b=fopen("/Users/s20171105118/Desktop/GYF/studentout.csv","w");
+    for(i=0;i<l;i++){
+    fprintf(b,"%s,%s,%s,%s,%s,%s,%d,%d,%d,%d,%d",number[i],name[i],gender[i],db[i],clas[i],phone[i],judge[0],judge[1],judge[2],judge[3],judge[4]);
+    }
+    fclose(b);
+  /*  ofstream oFile("Users/s20171105118/Desktop/GYF/studentdataout.csv");
     oFile << "numbers,name,sex,dateofbirth,class,phoneNO,average\n";
     for(i=0;i<l;++i){
         oFile<< number[i] << ","<< name[i] << ","<< gender[i] << ","<< db[i] << ","<< clas[i] << ","<< phone[i] << ","<< pjz[i]<<endl;
+
     }
-    oFile.close();
+*/
+
     return 0;
     }
