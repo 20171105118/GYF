@@ -44,7 +44,6 @@ int main()
                 }
             int max=judge[0];
             int min=judge[0];
-            double pjz[i];
                     for(p=0; p<5; p++)
                     {
                     if(judge[p]>max)
